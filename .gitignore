@@ -12,6 +12,7 @@
 /db/*.sqlite3-journal
 
 # Ignore all test files
+>>>>>>> init-model
 /test/*
 
 # Ignore all logfiles and tempfiles.
