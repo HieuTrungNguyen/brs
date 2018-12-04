@@ -1,8 +1,23 @@
 en:
+  layouts:
+    header:
+      app: "Book Review"
+      search: "Search"
+      submit: "Submit"
+      help: "Help"
+      login: "Log in"
   shared:
     error_messages:
       form: "The form contains"
       errors: "errors"
+  static_pages:
+    home:
+      slogan: "Blow your mind"
+      book: "Book"
+      blog: "Blog"
+      company: "Company"
+      start: "Let's start!"
+      signup_now: "Sign up now"
   users:
     new:
       confir: "Confirmation"

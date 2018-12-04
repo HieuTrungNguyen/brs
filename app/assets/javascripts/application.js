@@ -16,3 +16,7 @@
 //= require jquery
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+})

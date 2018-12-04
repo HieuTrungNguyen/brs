@@ -2,14 +2,21 @@
 <html>
   <head>
     <title>Brs</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <%= stylesheet_link_tag "application", media: :all, "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <%= render "layouts/default" %>
+    <%= render "layouts/shim" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <div class="container full-screen">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
   </body>
 </html>

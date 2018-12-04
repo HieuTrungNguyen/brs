@@ -1,9 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-body {
-  padding-top: 60px;
-}
+@import "color.scss";
 
 section {
   overflow: auto;
@@ -61,4 +58,109 @@ input {
     color: red;
     margin: 0 0 30px 0;
   }
+}
+
+body {
+  font: 400 15px/1.8 Lato, sans-serif;
+  color: $dark-blue;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+header {
+  color: $white;
+  text-align: center;
+}
+
+#home {
+  border-radius: 5px;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url('cover.jpg');
+  height: 300px;
+  min-height: 75%;
+  width: 100%;
+}
+
+.container {
+  padding: 80px 120px;
+}
+
+.nav-tabs li a {
+  color: $dark-blue;
+}
+
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: $dark-grey;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 4px;
+  opacity: 0.9;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: $light-grey !important;
+}
+
+.navbar-nav li a:hover {
+  color: $blue !important;
+}
+
+.navbar-nav li.active a {
+  color: $blue !important;
+  background-color: $light-black !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+
+.open .dropdown-toggle {
+  color: $blue;
+  background-color: $black-pur !important;
+}
+
+.dropdown-menu li a {
+  color: $black !important;
+}
+
+.dropdown-menu li a:hover {
+  background-color: red !important;
+}
+
+.w3-book-blog {
+  font-size: 90px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.w3-tag {
+  background-color: $black;
+  color: $blue;
+  display: inline-block;
+  padding: 0 8px;
+  text-align: center;
+}
+
+footer {
+  background-color: $d-grey;
+  color: $white-m;
+  padding: 32px;
+}
+
+footer a {
+  color: $white-m;
+}
+
+footer a:hover {
+  color: $dark-blue;
+  text-decoration: none;
 }
