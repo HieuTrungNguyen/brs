@@ -6,10 +6,21 @@ en:
       submit: "Submit"
       help: "Help"
       login: "Log in"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+  sessions:
+    new:
+      remember_me: "Remember me on this computer"
+    create:
+      invalid: "Invalid email/password combination"
+
   shared:
     error_messages:
       form: "The form contains"
       errors: "errors"
+
   static_pages:
     home:
       slogan: "Blow your mind"
@@ -17,7 +28,8 @@ en:
       blog: "Blog"
       company: "Company"
       start: "Let's start!"
-      signup_now: "Sign up now"
+      signup_now: "Sign up now!"
+
   users:
     new:
       confir: "Confirmation"

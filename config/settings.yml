@@ -1,8 +1,7 @@
-user:
-  name:
-    length: 50
-  email:
-    length: 255
-  password:
-    min_length: 6
-    max_length: 24
+name:
+  length: 50
+email:
+  length: 255
+password:
+  min_length: 6
+  max_length: 24
