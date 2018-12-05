@@ -18,6 +18,8 @@ gem "carrierwave", "1.1.0"
 gem "mini_magick", "4.7.0"
 gem "fog", "1.40.0"
 gem "config"
+gem "rubocop", "~> 0.46.0", require: false
+
 
 gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
