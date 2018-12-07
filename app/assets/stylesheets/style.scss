@@ -81,9 +81,9 @@ aside {
 }
 
 #error_explanation {
-  color: red;
+  color: $red;
   ul {
-    color: red;
+    color: $red;
     margin: 0 0 30px 0;
   }
 }
@@ -168,7 +168,7 @@ header {
 }
 
 .dropdown-menu li a:hover {
-  background-color: red !important;
+  background-color: $red !important;
 }
 
 .w3-book-blog {
@@ -213,4 +213,24 @@ footer a:hover {
   width: auto;
   margin-left: 0;
   margin-top: 7px;
+}
+
+.book {
+  width: 200px;
+  height: 250px;
+}
+.content-book {
+  text-align: center;
+  a {
+    color: $black;
+    &:hover {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+}
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: $red;
 }
