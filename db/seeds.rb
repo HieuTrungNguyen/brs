@@ -3,11 +3,12 @@ User.create! username: "Hieu Trung Nguyen",
              password: "123456",
              avatar: "",
              password_confirmation: "123456",
-             role: 1
+             role: 1,
+             admin: true
 49.times do |n|
   name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
+  email = "example-#{n+1}@gmail.com"
+  password = "123456"
   User.create! username: name,
                email: email,
                avatar: "",

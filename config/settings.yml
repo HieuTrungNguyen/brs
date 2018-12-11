@@ -1,9 +1,11 @@
 name:
   length: 50
+
 email:
   length: 255
+
 password:
   min_length: 6
   max_length: 24
-book:
-  per_page: 8
+
+per_page: 8
