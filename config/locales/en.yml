@@ -1,4 +1,23 @@
 en:
+  books:
+    show:
+      not_find: "Not find book!"
+
+  categories:
+    create:
+      success: "New category is created successfully!"
+      not_create: "Not create category"
+    index:
+      index: "STT"
+      title: "Title"
+      descript: "Description"
+      active: "Active"
+      edit: "Edit"
+      delete: "Delete"
+      sure: "You sure?"
+    show:
+      not_find: "Not find category!"
+
   layouts:
     header:
       app: "Book Review"
@@ -10,6 +29,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       logout: "Log out"
+      categories: "Categories"
   sessions:
     new:
       remember_me: "Remember me on this computer"
