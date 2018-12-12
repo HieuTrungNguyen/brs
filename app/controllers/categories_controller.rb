@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :load_category, except: [:new, :create, :index]
+  before_action :logged_in_user
   before_action :verify_admin, except: [:index, :show]
 
   def index
@@ -24,6 +25,25 @@ class CategoriesController < ApplicationController
   def show; end
 
   def edit; end
+
+  def update
+    if @category.update_attributes category_params
+      flash[:success] = t ".success"
+      redirect_to @category
+    else
+      flash[:danger] = t ".failed"
+      redirect_back_or categories_url
+    end
+  end
+
+  def destroy
+    if @category.destroy
+      flash[:success] = t ".destroy"
+    else
+      flash[:danger] = t ".not_destroy"
+    end
+    redirect_to categories_url
+  end
 
   private
   def category_params
