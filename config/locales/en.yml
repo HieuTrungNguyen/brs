@@ -1,9 +1,16 @@
 en:
+  must_login: "You must log in!"
+
   books:
     show:
       not_find: "Not find book!"
 
   categories:
+    form:
+      descript: "Description"
+      back: "Back"
+    new:
+      create: "Create"
     create:
       success: "New category is created successfully!"
       not_create: "Not create category"
@@ -15,8 +22,17 @@ en:
       edit: "Edit"
       delete: "Delete"
       sure: "You sure?"
+      new: "New Category"
     show:
       not_find: "Not find category!"
+    edit:
+      save: "Save"
+    update:
+      success: "Updated this category successfully!"
+      failed: "Updated this category failed!"
+    destroy:
+      destroy: "This category is destroyed!"
+      not_destroy: "Don't destroy this category at the moment"
 
   layouts:
     header:
