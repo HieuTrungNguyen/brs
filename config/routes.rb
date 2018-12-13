@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :users
   resources :books, only: [:index, :show]
   resources :categories
+  resources :comments, only: [:new, :create, :show]
 end
