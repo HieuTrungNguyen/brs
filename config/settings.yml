@@ -5,12 +5,16 @@ email:
   length: 255
 
 password:
-  min_length: 6
-  max_length: 24
+  minimum: 6
+  maximum: 24
 
 category:
   rows: 5
   title:
     length: 50
+
+comment:
+  minimum: 1
+  maximum: 255
 
 per_page: 8

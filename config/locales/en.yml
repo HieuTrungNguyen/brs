@@ -2,8 +2,11 @@ en:
   must_login: "You must log in!"
 
   books:
+    comment_form:
+      submit: "Submit"
     show:
       not_find: "Not find book!"
+      comment: "Comment"
 
   categories:
     form:
@@ -33,6 +36,10 @@ en:
     destroy:
       destroy: "This category is destroyed!"
       not_destroy: "Don't destroy this category at the moment"
+
+  comments:
+    load_comment:
+      not_find: "Not find that comment!"
 
   layouts:
     header:

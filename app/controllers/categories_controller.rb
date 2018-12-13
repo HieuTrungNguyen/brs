@@ -32,7 +32,7 @@ class CategoriesController < ApplicationController
       redirect_to @category
     else
       flash[:danger] = t ".failed"
-      redirect_back_or categories_url
+      redirect_to categories_url
     end
   end
 
