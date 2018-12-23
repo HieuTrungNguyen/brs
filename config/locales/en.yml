@@ -1,9 +1,10 @@
 en:
   must_login: "You must log in!"
+  sure: "You sure?"
+  submit: "Submit"
 
   books:
     comment_form:
-      submit: "Submit"
     show:
       not_find: "Not find book!"
       comment: "Comment"
@@ -24,7 +25,6 @@ en:
       active: "Active"
       edit: "Edit"
       delete: "Delete"
-      sure: "You sure?"
       new: "New Category"
     show:
       not_find: "Not find category!"
@@ -38,14 +38,20 @@ en:
       not_destroy: "Don't destroy this category at the moment"
 
   comments:
+    comment:
+      commented: "Commented"
+      ago: "ago"
+      edit: "Edit"
+      delete: "Delete"
     load_comment:
       not_find: "Not find that comment!"
+    update:
+      not_updated: "Don't update this comment!"
 
   layouts:
     header:
       app: "Book Review"
       search: "Search"
-      submit: "Submit"
       help: "Help"
       login: "Log in"
       account: "Account"
@@ -53,6 +59,7 @@ en:
       settings: "Settings"
       logout: "Log out"
       categories: "Categories"
+      books: "Books"
   sessions:
     new:
       remember_me: "Remember me on this computer"
