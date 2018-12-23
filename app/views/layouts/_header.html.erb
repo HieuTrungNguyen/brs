@@ -13,12 +13,13 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="<%= t ".search" %>">
         </div>
-        <button type="submit" class="btn btn-default"><%= t ".submit" %></button>
+        <button type="submit" class="btn btn-default"><%= t "submit" %></button>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t(".help"), help_path %></li>
         <% if logged_in? %>
           <li><%= link_to t(".categories"), categories_path %></li>
+          <li><%= link_to t(".books"), books_path %></li>
           <li class="dropdown">
             <a href="" class="dropdown-toggle" data-toggle="dropdown">
               <%= t ".account" %> <b class="caret"></b>

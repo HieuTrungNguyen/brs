@@ -11,5 +11,10 @@
     <div id="content-<%= comment.id %>">
       <p><%= comment.content %></p>
     </div>
+    <% if current_user? comment.user %>
+      <%= link_to t(".edit")t, edit_comment_path(comment), remote: true %>
+      <%= link_to t(".delete"), comment, method: :delete,
+        data: {confirm: t("sure")}, remote: true %>
+    <% end %>
   </div>
 </div>
