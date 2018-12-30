@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   resources :users
   resources :books, only: [:index, :show]
   resources :categories
-  resources :comments
+  resources :comments do
+    member do
+      get :new_reply
+    end
+  end
 end
