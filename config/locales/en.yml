@@ -43,6 +43,7 @@ en:
       ago: "ago"
       edit: "Edit"
       delete: "Delete"
+      reply: "Reply"
     load_comment:
       not_find: "Not find that comment!"
     update:

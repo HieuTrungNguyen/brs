@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   before_action :load_book, only: [:show]
-  before_action :logged_in_user, only: [:index, :show]
 
   def index
     @books = Book.list_book.page(params[:page]).

@@ -41,9 +41,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def new_reply
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
   def comment_params
-    params.require(:comment).permit :content, :user_id, :book_id
+    params.require(:comment).permit :content, :user_id, :book_id, :parent_id
   end
 
   def load_comment
