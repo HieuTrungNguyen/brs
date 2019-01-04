@@ -5,6 +5,19 @@ en:
 
   books:
     comment_form:
+    like:
+      like: "like"
+      Like: "Like"
+      other: "other"
+    unlike:
+      dislike: "Dislike"
+      you_like: "You like this"
+      like_this: "like this"
+      other: "other"
+      and: "You and"
+    index:
+      like: "like"
+      comment: "comment"
     show:
       not_find: "Not find book!"
       comment: "Comment"

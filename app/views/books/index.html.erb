@@ -10,6 +10,16 @@
         <%= link_to book.name, book %>
         <p class="price">$<%= book.price %></p>
       </div>
+      <div class="comments">
+        <span class="like">
+          <span class="glyphicon glyphicon-thumbs-up"></span>
+          <%= pluralize book.likes.count, t(".like") %>&nbsp;
+        </span>
+        <span class="comment">
+          <span class="glyphicon glyphicon-comment"></span>
+          <%= pluralize book.comments.count, t(".comment") %>
+        </span>
+      </div>
     </div>
   <% end %>
   <%= paginate @books, theme: "twitter-bootstrap-3" %>

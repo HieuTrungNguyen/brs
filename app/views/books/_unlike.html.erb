@@ -1,0 +1,11 @@
+<%= form_for current_user.likes.find_by(book_id: @book.id),
+  html: {method: :delete}, remote: true do |f| %>
+  <button type="submit" class="btn btn-info">
+    <span class="glyphicon glyphicon-thumbs-down"></span> <%= t ".dislike" %>
+  </button>
+  <% if @book.likes.count < 2 %>
+    <%= t ".you_like" %>.
+  <% else %>
+    <%= t ".and" %> <%= pluralize @book.likes.count - 1, t(".other") %> <%= t ".like_this" %>.
+  <% end %>
+<% end %>
