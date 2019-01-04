@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :follows
   has_many :orders
   has_many :mark_books
+  has_many :liked, through: :likes, source: :book
 
   validates :username, presence: true, length: {maximum: Settings.name.length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -45,5 +46,17 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: nil
+  end
+
+  def like book
+    liked << book
+  end
+
+  def unlike book
+    liked.destroy book
+  end
+
+  def liked? book
+    liked.include? book
   end
 end
