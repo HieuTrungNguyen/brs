@@ -11,5 +11,5 @@
   <button type="button" class="btn btn-default btn-success">
     <span class="glyphicon glyphicon-thumbs-up"></span> <%= t ".Like" %>
   </button>
-  <%= pluralize @book.likes.count, t("books.like") if @book.likes.count > 0 %>
+  <%= pluralize @book.likes.count, t(".like") if @book.likes.count > 0 %>
 <% end %>

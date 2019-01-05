@@ -1,0 +1,18 @@
+<% @authors.each_with_index do |author, index| %>
+  <tr>
+    <td>
+      <%= create_index params[:page], index, Settings.per_page %>
+    </td>
+    <td><%= link_to author.name, [:admin, author] %></td>
+    <td><%= author.phone %></td>
+    <td><%= author.birth_year %></td>
+    <td><%= author.address %></td>
+    <td>
+      <%= link_to t(".edit"), edit_admin_author_path(author), class: "btn btn-info" %>
+    </td>
+    <td>
+      <%= link_to t(".delete"), [:admin, author], method: :delete,
+        data: {confirm: t(".sure?")}, class: "btn btn-danger" %>
+    </td>
+  </tr>
+<% end %>

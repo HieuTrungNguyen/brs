@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="form-group">
+    <%= link_to t(".new"), new_admin_author_path, class: "btn btn-success" %>
+  </div>
+  <table class="table table-bordered text-center">
+    <thead>
+      <tr>
+        <th class="table-th"><%= t ".STT" %></th>
+        <th class="table-th"><%= t ".name" %></th>
+        <th class="table-th"><%= t ".phone" %></th>
+        <th class="table-th"><%= t ".born_on" %></th>
+        <th class="table-th"><%= t ".born_in" %></th>
+        <th class="table-th" colspan="2">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render "list" %>
+    </tbody>
+  </table>
+  <%= paginate @authors, theme: "twitter-bootstrap-3" %>
+</div>
