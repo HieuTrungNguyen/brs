@@ -3,8 +3,53 @@ en:
   sure: "You sure?"
   submit: "Submit"
 
+  admin:
+    admin:
+      verify_admin:
+        not_admin: "You aren't admin."
+    authors:
+      list:
+        edit: "Edit"
+        delete: "Delete"
+        sure?: "You sure?"
+      new:
+        creates: "Creates"
+      create:
+        create_success: "Create new author successfully!"
+        create_failed: "Create new author failed."
+      index:
+        new: "New author"
+        STT: "STT"
+        name : "Name"
+        phone: "Phone"
+        born_on: "Was born on"
+        born_in: "Was born in"
+      show:
+        not_found: "Not found author!"
+      edit:
+        update: "Update"
+      update:
+        update_success: "Update this author successfully!"
+        not_updated: "Not updated at the moment."
+      destroy:
+        delete_success: "This author is deleted successfully!"
+        not_delete: "Not deleted this author at the moment."
+
   books:
     comment_form:
+    like:
+      like: "like"
+      Like: "Like"
+      other: "other"
+    unlike:
+      dislike: "Dislike"
+      you_like: "You like this"
+      like_this: "like this"
+      other: "other"
+      and: "You and"
+    index:
+      like: "like"
+      comment: "comment"
     show:
       not_find: "Not find book!"
       comment: "Comment"
@@ -43,6 +88,7 @@ en:
       ago: "ago"
       edit: "Edit"
       delete: "Delete"
+      reply: "Reply"
     load_comment:
       not_find: "Not find that comment!"
     update:
@@ -60,6 +106,7 @@ en:
       logout: "Log out"
       categories: "Categories"
       books: "Books"
+      authors: "Authors"
   sessions:
     new:
       remember_me: "Remember me on this computer"

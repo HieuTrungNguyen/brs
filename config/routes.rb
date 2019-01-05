@@ -7,8 +7,17 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
 
+  namespace :admin do
+    resources :authors
+  end
+
   resources :users
   resources :books, only: [:index, :show]
   resources :categories
-  resources :comments
+  resources :comments do
+    member do
+      get :new_reply
+    end
+  end
+  resources :likes, except: :index
 end
