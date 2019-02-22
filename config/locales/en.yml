@@ -41,6 +41,9 @@ en:
       like: "like"
       Like: "Like"
       other: "other"
+    favorite:
+      favorite: "Favorite"
+      unfavorite: "Unfavorite"
     unlike:
       dislike: "Dislike"
       you_like: "You like this"
@@ -53,6 +56,7 @@ en:
     show:
       not_find: "Not find book!"
       comment: "Comment"
+      mark: "Mark this book"
 
   categories:
     form:
@@ -94,6 +98,10 @@ en:
     update:
       not_updated: "Don't update this comment!"
 
+  favorites:
+    create:
+      danger: "Please try again!"
+
   layouts:
     header:
       app: "Book Review"
@@ -107,6 +115,15 @@ en:
       categories: "Categories"
       books: "Books"
       authors: "Authors"
+
+  mark_books:
+    mark_book:
+      unread: "Unread"
+      reading: "Reading"
+      read: "Read"
+    load_mark_book:
+      danger: "Not found"
+
   sessions:
     new:
       remember_me: "Remember me on this computer"

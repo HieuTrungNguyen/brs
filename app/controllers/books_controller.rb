@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :load_book, only: [:show]
+  before_action :load_book, :load_mark_book, only: [:show]
 
   def index
     @books = Book.list_book.page(params[:page]).
@@ -22,5 +22,11 @@ class BooksController < ApplicationController
     return if @book
     flash[:danger] = t ".not_find"
     redirect_to books_path
+  end
+
+  def load_mark_book
+    if current_user.present?
+      @mark_book = MarkBook.find_by(user_id: current_user.id, book_id: @book.id) || MarkBook.new
+    end
   end
 end

@@ -4,10 +4,12 @@ class User < ApplicationRecord
   has_many :rates
   has_many :comments
   has_many :likes
+  has_many :favorites
   has_many :follows
   has_many :orders
   has_many :mark_books
   has_many :liked, through: :likes, source: :book
+  has_many :favorited, through: :favorites, source: :book
 
   validates :username, presence: true, length: {maximum: Settings.name.length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -58,5 +60,17 @@ class User < ApplicationRecord
 
   def liked? book
     liked.include? book
+  end
+
+  def favorite book
+    favorited << book
+  end
+
+  def unfavorite book
+    favorited.destroy book
+  end
+
+  def favorited? book
+    favorited.include? book
   end
 end
