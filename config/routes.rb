@@ -20,4 +20,6 @@ Rails.application.routes.draw do
     end
   end
   resources :likes, except: :index
+  resources :mark_books, only: [:create, :update]
+  resources :favorites, only: [:create, :destroy]
 end

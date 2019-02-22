@@ -7,6 +7,7 @@ class Book < ApplicationRecord
   has_many :author_books
   has_many :mark_books
   has_many :order_details
+  has_many :favorites
 
   scope :list_book, ->{select :id, :name, :price, :image, :created_id, :category_id}
 end

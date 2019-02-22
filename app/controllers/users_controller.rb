@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     @books = current_user.liked.page(params[:page]).per Settings.per_page
   end
 
+  def favorites
+    @books = current_user.favorited
+  end
+
   private
   def user_params
     params.require(:user).permit :username, :email, :password, :password_confimation

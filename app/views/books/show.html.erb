@@ -5,6 +5,19 @@
         <%= image_tag @book.image, class: "image" %>
       </div>
     </div>
+    <div class="rate-book">
+      <% if logged_in? %>
+        <span class="marks"><%= t ".mark" %></span>
+        <div class="row">
+          <div class="col-sm-3 mark-form">
+            <%= render "mark_books/mark_book", mark_book: @mark_book %>
+          </div>
+          <div class="col-sm-3 favorites">
+            <%= render "favorite_form" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
     <hr>
     <%= render "like_form" %>
   </div>
