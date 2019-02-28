@@ -1,4 +1,6 @@
 class Book < ApplicationRecord
+  include Filterable
+
   belongs_to :category, optional: true
 
   has_many :rates
@@ -10,4 +12,6 @@ class Book < ApplicationRecord
   has_many :favorites
 
   scope :list_book, ->{select :id, :name, :price, :image, :created_id, :category_id}
+  scope :search_name, -> search_name {where "name LIKE ?", "%#{search_name}%"}
+  scope :category_id, -> category_id {where category_id: category_id}
 end

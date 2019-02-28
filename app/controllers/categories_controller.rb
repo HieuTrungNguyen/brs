@@ -4,7 +4,9 @@ class CategoriesController < ApplicationController
   before_action :verify_admin, except: [:index, :show]
 
   def index
-    @categories = Category.list_category.page(params[:page]).per Settings.per_page
+    @categories = Category.search(params[:search])
+      .page(params[:page])
+      .per Settings.per_page
   end
 
   def new

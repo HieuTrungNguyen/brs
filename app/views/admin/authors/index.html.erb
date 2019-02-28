@@ -1,21 +1,36 @@
 <div class="row">
   <div class="form-group">
-    <%= link_to t(".new"), new_admin_author_path, class: "btn btn-success" %>
+    <div class="col-md-3">
+      <%= link_to t(".new"), new_admin_author_path, class: "btn btn-success" %>
+    </div>
+    <div class="col-md-6 pull-right">
+    <%= form_for admin_authors_path, method: "get", enforce_utf8: false do %>
+      <div class="col-md-2"></div>
+      <div class="col-md-7">
+        <%= text_field_tag :search, params[:search], class: "form-control" %>
+      </div>
+      <div class="col-md-3">
+        <%= submit_tag t(".search"), name: nil, class: "btn btn-info" %>
+      </div>
+    <% end %>
   </div>
-  <table class="table table-bordered text-center">
-    <thead>
-      <tr>
-        <th class="table-th"><%= t ".STT" %></th>
-        <th class="table-th"><%= t ".name" %></th>
-        <th class="table-th"><%= t ".phone" %></th>
-        <th class="table-th"><%= t ".born_on" %></th>
-        <th class="table-th"><%= t ".born_in" %></th>
-        <th class="table-th" colspan="2">Active</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= render "list" %>
-    </tbody>
-  </table>
-  <%= paginate @authors, theme: "twitter-bootstrap-3" %>
+  </div>
+  <div class="list-authors">
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th class="table-th"><%= t ".STT" %></th>
+          <th class="table-th"><%= t ".name" %></th>
+          <th class="table-th"><%= t ".phone" %></th>
+          <th class="table-th"><%= t ".born_on" %></th>
+          <th class="table-th"><%= t ".born_in" %></th>
+          <th class="table-th" colspan="2">Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "list" %>
+      </tbody>
+    </table>
+    <%= paginate @authors, theme: "twitter-bootstrap-3" %>
+  </div>
 </div>

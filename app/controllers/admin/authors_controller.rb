@@ -18,7 +18,9 @@ class Admin::AuthorsController < ApplicationController
   end
 
   def index
-    @authors = Author.list_author.page(params[:page]).per Settings.per_page
+    @authors = Author.search(params[:search])
+      .page(params[:page])
+      .per Settings.per_page
   end
 
   def show; end

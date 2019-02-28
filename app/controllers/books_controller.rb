@@ -2,8 +2,10 @@ class BooksController < ApplicationController
   before_action :load_book, :load_mark_book, only: [:show]
 
   def index
-    @books = Book.list_book.page(params[:page]).
-      per Settings.per_page
+    @books = Book.filter(params.slice :search_name, :category_id)
+      .page(params[:page])
+      .per Settings.per_page
+    @categories = Category.all
   end
 
   def show
