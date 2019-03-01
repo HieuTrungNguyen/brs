@@ -24,6 +24,7 @@ en:
         phone: "Phone"
         born_on: "Was born on"
         born_in: "Was born in"
+        search: "Search"
       show:
         not_found: "Not found author!"
       edit:
@@ -50,6 +51,8 @@ en:
       like_this: "like this"
       other: "other"
       and: "You and"
+    search:
+      search: "Search"
     index:
       like: "like"
       comment: "comment"
